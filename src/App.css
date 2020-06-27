@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+html, body, #root {
+    font: 0.9rem sans-serif;
+    background: #12c41b;
+    color: #1e2432;
+    height: 100%;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container {
+    position: absolute;  
+    width: 25%;
+    height: 75vh;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: deepskyblue;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404); 
+     
+}
+.label{
+    width: 100%;   
+    height: 50px; 
+    margin: 0;
+    background-color: firebrick;   
+    border-radius: 20px 20px 0 0;
+    text-align: center;
+    line-height: 50px;
+    font-size: 2rem;    
+    
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search{    
+    width: 100%;
+    height: 50px;
+    border: none;
+    padding: 0;
+    line-height: 50px;
+    font-size: 2rem;
+  
+}
+.search:focus {
+    outline: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.city {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 25px;     
 }
 
-.App-link {
-  color: #61dafb;
+.city-temp {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #1e2432;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.city-name {
+    font-size: 2em;
+}
+
+.city-name sup {
+    padding: 0.2em 0.6em;
+    margin-left: 0.2em;
+    border-radius: 30px;
+    color: #fff;
+    background: #ff8c00;
+}
+
+.city sup {
+    font-size: 0.65em;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.city-icon {
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+p {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    
+}
+
+@media only screen and (max-width: 1500px) {
+    .main-container {
+        width: 50%;
+    }
+
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        width: 65%;
+    }
+
 }
